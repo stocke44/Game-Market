@@ -1,7 +1,9 @@
 import React from 'react'
+import DrawerCompnent from './Drawer';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar,IconButton,Typography,Button,Link,MenuItem } from '@material-ui/core'
+import { Box,AppBar, Toolbar,useMediaQuery,Button, useTheme } from '@material-ui/core'
 import  MenuIcon  from '@material-ui/icons/Menu';
+import {Link} from 'react-router-dom'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -15,25 +17,41 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
       flexGrow: 1,
-    }
-  }));
+    },
+    head:{
+      [theme.breakpoints.down('xs')]: {
+              paddingLeft: '0',
+      },
+    },      
+
+}));
+
+
 
 const NavBar =()=>{
     const classes = useStyles();
+    const theme = useTheme();
+    const isMatch = useMediaQuery(theme.breakpoints.down('xs'));
 
     return (
-        <AppBar position="static" color="default">
-            <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon />
-                </IconButton>
-                <Link href="/" >Game Market</Link>
+      <Box>
+        <AppBar  position="static" color="default">
+            <Toolbar className={classes.head} >
+              {isMatch ? <DrawerCompnent/>:
+               (<Box>
+                <Link to="/" >Game Market</Link>
                 <Button href="/signin" color="inherit">Login</Button>
                 <Button href="/signup" color="inherit">Signup</Button>
                 <Button href="/profile" color="inherit">Profile</Button>
-            </Toolbar>
+                </Box>)}
+            </Toolbar>              
         </AppBar>
+          
+      </Box>
     )
 }
 
 export default NavBar;
+
+
+
