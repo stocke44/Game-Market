@@ -1,8 +1,9 @@
 import React from "react"
+import { Typography } from "@material-ui/core";
 
 const Profile= () =>{
     return(
-        <h1>This is the Profile page</h1>
+        <Typography variant="h1"> This is the Profile page</Typography>
     )
 }
 

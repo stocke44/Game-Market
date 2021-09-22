@@ -1,15 +1,12 @@
-import React from 'react'
+import React from 'react';
 import DrawerCompnent from './Drawer';
 import { makeStyles } from '@material-ui/core/styles';
-import { Box,AppBar, Toolbar,useMediaQuery,Button, useTheme } from '@material-ui/core'
-import  MenuIcon  from '@material-ui/icons/Menu';
-import {Link} from 'react-router-dom'
-
+import { Box,AppBar, Toolbar,useMediaQuery,Button, useTheme } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      backgroundColor: "yellow",
 
     },
     menuButton: {
