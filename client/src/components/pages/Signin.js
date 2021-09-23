@@ -31,13 +31,13 @@ const Signin = () =>{
 
     return(
         <Card  className={classes.signin}>
-            <CardContent>
+            <CardContent className="card-singin">
                 <Typography className={classes.formText} variant={"h2"}>
                     Signin
                 </Typography>
                 <Box className={classes.formContent} component="form"sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}} noValidateautoComplete="off">
-                    <TextField required id="outlined-required" label="Email"></TextField>
-                    <TextField required id="outlined-password-input" type="password" label="Password" autoComplete="current-password"></TextField>
+                    <TextField required id="outlined-required" label="Email" variant="standard" ></TextField>
+                    <TextField required id="outlined-password-input" type="password" label="Password" autoComplete="current-password" variant="standard" ></TextField>
                  </Box>
                     <CardActions >
                         <Button className={classes.formButton} variant="contained">Signin</Button>                    

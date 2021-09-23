@@ -31,14 +31,14 @@ const Signup = () =>{
 
     return(
         <Card  className={classes.signup}>
-            <CardContent>
+            <CardContent className="card-singup">
                 <Typography className={classes.formText} variant={"h2"}>
                     Signup
                 </Typography>
                 <Box className={classes.formDisplay} component="form"sx={{'& .MuiTextField-root': { m: 1, width: '25ch' },}} noValidateautoComplete="off">
-                    <TextField fullWidth required id="outlined-required" label="Email"  ></TextField>
-                    <TextField fullWidth required id="outlined-name" label="Name" ></TextField>                        
-                    <TextField  fullWidth   required id="outlined-password-input" type="password" label="Password" autoComplete="current-password" ></TextField>
+                    <TextField required id="outlined-required" label="Email" variant="standard" ></TextField>
+                    <TextField required id="outlined-name" label="Name" variant="standard" ></TextField>                        
+                    <TextField required id="outlined-password-input" type="password" label="Password" autoComplete="current-password" variant="standard" ></TextField>
                  </Box>
                     <CardActions >
                         <Button className={classes.formButton} variant="contained">Signup</Button>                    
