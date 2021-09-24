@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      marginBottom:'48px',
 
     },
     menuButton: {
@@ -32,7 +33,7 @@ const NavBar =()=>{
 
     return (
       <Box>
-        <AppBar  position="static" color="default">
+        <AppBar className={classes.root} position="static" color="default">
             <Toolbar className={classes.head} >
               {isMatch ? <DrawerCompnent/>:
                (<Box>

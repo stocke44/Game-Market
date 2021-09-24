@@ -1,7 +1,12 @@
 .profile{    
+    max-width: 1200px;
+    margin: 0 auto;
     .profile-info{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        margin-bottom: 24px;
+        border-bottom: 1px solid black;
         .profile-image{
             margin-right: 48px; 
             
@@ -14,7 +19,22 @@
             }            
         }
         .profile-bio{
-
+            .profile-data{
+                display: flex;
+                p{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    .gallery{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        .MuiCard-root{
+            margin: 0 12px 24px 12px;
+            max-width: 350px;
         }
     }
 
