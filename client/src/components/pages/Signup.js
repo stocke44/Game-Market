@@ -1,7 +1,7 @@
 import React from "react"
 import { makeStyles} from '@material-ui/core/styles';
 import { Box,Button, Card, CardActions, CardContent, TextField, Typography } from "@mui/material";
-
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     signup:{
@@ -42,7 +42,10 @@ const Signup = () =>{
                  </Box>
                     <CardActions >
                         <Button className={classes.formButton} variant="contained">Signup</Button>                    
-                    </CardActions> 
+                    </CardActions>
+                    <Typography className={classes.formText} variant="h5">
+                        <Link   to="/signin">Already have an account?</Link>
+                    </Typography>  
             </CardContent>
         </Card>
     )
